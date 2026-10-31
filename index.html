@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SABLE &amp; STEAM — Specialty Coffee &amp; Artisan Café</title>
+    <meta
+      name="description"
+      content="An editorial web experience for SABLE &amp; STEAM, an upscale specialty coffee and artisan café concept set in Surry Hills, Sydney."
+    />
+    <meta property="og:title" content="SABLE &amp; STEAM — Specialty Coffee &amp; Artisan Café" />
+    <meta
+      property="og:description"
+      content="An editorial web experience for SABLE &amp; STEAM, an upscale specialty coffee and artisan café concept set in Surry Hills, Sydney."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "SABLE & STEAM (Portfolio Demonstration)",
+        "description": "Fictional specialty coffee and artisan café concept in Surry Hills, Sydney, created as a web design agency portfolio demonstration.",
+        "servesCuisine": ["Specialty Coffee", "Artisan Bakery", "Light Bites"],
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "48 Reservoir Street (Demonstration Address)",
+          "addressLocality": "Surry Hills",
+          "addressRegion": "NSW",
+          "postalCode": "2010",
+          "addressCountry": "AU"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#FAF7F2] text-[#1E1612] selection:bg-[#556148] selection:text-[#FAF7F2]">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-[#FAF7F2] focus:text-[#1E1612] focus:px-4 focus:py-2 focus:text-sm focus:font-medium"
+    >
+      Skip to main content
+    </a>
+
+    <!-- Transparent Sticky Top Bar (Strict 3-Zone Contract) -->
+    <header
+      id="site-header"
+      class="site-header fixed top-0 inset-x-0 z-40 h-16 md:h-20 border-b border-white/10"
+    >
+      <div class="max-w-[1320px] mx-auto h-full px-6 md:px-10 flex items-center justify-between gap-8">
+        <!-- Zone 1: Single-line Brand Wordmark -->
+        <a
+          href="#home"
+          class="font-serif-editorial text-xl md:text-2xl font-semibold tracking-[0.14em] text-[#FAF7F2] whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FAF7F2]"
+        >
+          SABLE &amp; STEAM
+        </a>
+
+        <!-- Zone 2: Clean Single-Line Navigation Links -->
+        <nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-7 text-[13px] font-medium tracking-[0.04em] text-[#FAF7F2]/90">
+          <a href="#home" class="nav-link hover:text-[#FAF7F2] transition-colors whitespace-nowrap shrink-0">Home</a>
+          <a href="#story" class="nav-link hover:text-[#FAF7F2] transition-colors whitespace-nowrap shrink-0">Our Story</a>
+          <a href="#menu" class="nav-link hover:text-[#FAF7F2] transition-colors whitespace-nowrap shrink-0">Coffee Menu</a>
+          <a href="#space" class="nav-link hover:text-[#FAF7F2] transition-colors whitespace-nowrap shrink-0">Our Space</a>
+          <a href="#gallery" class="nav-link hover:text-[#FAF7F2] transition-colors whitespace-nowrap shrink-0">Gallery</a>
+          <a href="#contact" class="nav-link hover:text-[#FAF7F2] transition-colors whitespace-nowrap shrink-0">Contact</a>
+        </nav>
+
+        <!-- Zone 3: 1 Primary Action + Mobile Menu Trigger -->
+        <div class="flex items-center gap-3 shrink-0">
+          <a
+            href="#visit"
+            class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-medium tracking-[0.06em] text-[#FAF7F2] bg-[#556148] hover:bg-[#434D38] transition-colors whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FAF7F2]"
+          >
+            Visit Our Café
+          </a>
+          <button
+            type="button"
+            id="mobile-menu-open"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+            class="lg:hidden inline-flex items-center justify-center w-11 h-11 text-[#FAF7F2] hover:bg-white/10 transition-colors focus-visible:outline-2 focus-visible:outline-[#FAF7F2]"
+          >
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 7.5h16.5M3.75 16.5h16.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div
+      id="mobile-nav-drawer"
+      class="fixed inset-0 z-50 hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation"
+    >
+      <div id="mobile-nav-backdrop" class="fixed inset-0 bg-[#140E0B]/70 backdrop-blur-xs"></div>
+      <div class="fixed inset-y-0 right-0 w-full max-w-sm bg-[#1E1612] text-[#FAF7F2] px-8 py-6 flex flex-col justify-between border-l border-white/10">
+        <div>
+          <div class="flex items-center justify-between pb-6 border-b border-white/10">
+            <span class="font-serif-editorial text-xl tracking-[0.14em] font-semibold">SABLE &amp; STEAM</span>
+            <button
+              type="button"
+              id="mobile-menu-close"
+              aria-label="Close navigation menu"
+              class="w-11 h-11 inline-flex items-center justify-center text-[#FAF7F2]/80 hover:text-[#FAF7F2] focus-visible:outline-2 focus-visible:outline-[#FAF7F2]"
+            >
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <nav aria-label="Mobile Navigation Links" class="mt-8 flex flex-col gap-5">
+            <a href="#home" class="mobile-nav-link font-serif-editorial text-3xl text-[#FAF7F2]/90 hover:text-[#FAF7F2] transition-colors">Home</a>
+            <a href="#story" class="mobile-nav-link font-serif-editorial text-3xl text-[#FAF7F2]/90 hover:text-[#FAF7F2] transition-colors">Our Story</a>
+            <a href="#menu" class="mobile-nav-link font-serif-editorial text-3xl text-[#FAF7F2]/90 hover:text-[#FAF7F2] transition-colors">Coffee Menu</a>
+            <a href="#space" class="mobile-nav-link font-serif-editorial text-3xl text-[#FAF7F2]/90 hover:text-[#FAF7F2] transition-colors">Our Space</a>
+            <a href="#gallery" class="mobile-nav-link font-serif-editorial text-3xl text-[#FAF7F2]/90 hover:text-[#FAF7F2] transition-colors">Gallery</a>
+            <a href="#contact" class="mobile-nav-link font-serif-editorial text-3xl text-[#FAF7F2]/90 hover:text-[#FAF7F2] transition-colors">Contact</a>
+          </nav>
+        </div>
+
+        <div class="pt-6 border-t border-white/10 space-y-4">
+          <p class="text-xs text-[#E6DDD0]/75 leading-relaxed">
+            48 Reservoir Street, Surry Hills NSW 2010<br />
+            Daily from 6:30 am · Sydney, Australia
+          </p>
+          <a
+            href="#visit"
+            class="mobile-nav-link w-full inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium text-[#FAF7F2] bg-[#556148] hover:bg-[#434D38] transition-colors"
+          >
+            Visit Our Café
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <!-- 2. Full-Screen Hero Section (Text Directly Over Background Photograph) -->
+      <section
+        id="home"
+        class="relative min-h-screen w-full flex items-end md:items-center overflow-hidden img-fallback-shell"
+      >
+        <img
+          data-asset="hero"
+          src="/src/assets/images/hero_espresso_bar_1793352937796.jpg"
+          alt="Barista pouring freshly brewed specialty filter coffee into a handmade warm ivory ceramic cup on a walnut bar in Sydney"
+          referrerpolicy="no-referrer"
+          fetchpriority="high"
+          class="absolute inset-0 w-full h-full object-cover object-center"
+        />
+
+        <!-- Measured multi-layer contrast scrim for guaranteed readability -->
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 bg-gradient-to-r from-[#120D0A]/88 via-[#1E1612]/62 to-[#120D0A]/35"
+        ></div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 bg-gradient-to-t from-[#120D0A]/85 via-transparent to-[#120D0A]/55"
+        ></div>
+
+        <!-- Hero Content Directly Over Photograph -->
+        <div class="relative z-10 w-full max-w-[1320px] mx-auto px-6 md:px-10 pt-32 pb-20 md:py-28">
+          <div class="max-w-2xl">
+            <p class="hero-fade-1 text-xs md:text-[13px] font-medium tracking-[0.08em] text-[#E6DDD0]/90 mb-5">
+              Surry Hills, Sydney <span aria-hidden="true" class="mx-2">·</span> Specialty Coffee &amp; Artisan Café
+            </p>
+            <h1
+              class="hero-fade-2 font-serif-editorial text-[clamp(2.75rem,5.4vw,4.75rem)] leading-[1.06] font-normal text-[#FAF7F2] tracking-[0.01em]"
+            >
+              Coffee, Crafted With Intention.
+            </h1>
+            <p
+              class="hero-fade-2 mt-6 text-base md:text-lg leading-[1.7] text-[#F2ECE1]/90 max-w-[52ch]"
+            >
+              Thoughtfully sourced beans, carefully crafted drinks, and a slower kind of everyday luxury.
+            </p>
+            <div class="hero-fade-3 mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="#menu"
+                class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-medium tracking-[0.03em] text-[#FAF7F2] bg-[#556148] hover:bg-[#434D38] transition-colors whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FAF7F2]"
+              >
+                Explore Our Menu
+              </a>
+              <a
+                href="#visit"
+                class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-medium tracking-[0.03em] text-[#FAF7F2] border border-[#FAF7F2]/45 hover:border-[#FAF7F2] hover:bg-[#FAF7F2]/10 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FAF7F2]"
+              >
+                Visit Our Café
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Signature Coffee Experience ("Every Cup Has a Story.") -->
+      <section id="philosophy" class="py-24 md:py-32 bg-[#FAF7F2] border-b border-[#DFD5C5]">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <!-- Large Editorial Photograph -->
+            <figure class="reveal-block lg:col-span-7">
+              <div class="overflow-hidden bg-[#2C211B] img-fallback-shell aspect-[4/3]">
+                <img
+                  data-asset="extraction"
+                  src="/src/assets/images/espresso_shot_extraction_1793352939008.jpg"
+                  alt="Bottomless brass portafilter extracting rich espresso into a handmade ribbed stoneware cup"
+                  referrerpolicy="no-referrer"
+                  loading="lazy"
+                  class="w-full h-full object-cover editorial-photo"
+                />
+              </div>
+              <figcaption class="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs text-[#564940]">
+                <span>Morning calibration at our Surry Hills espresso bar</span>
+                <span>93.5°C <span aria-hidden="true">·</span> 1:2.1 Extraction Ratio</span>
+              </figcaption>
+            </figure>
+
+            <!-- Editorial Prose & Craftsmanship Pillars -->
+            <div class="reveal-block lg:col-span-5">
+              <p class="text-xs font-medium tracking-[0.08em] text-[#556148] mb-3">
+                Coffee Philosophy <span aria-hidden="true">·</span> Small-Lot Roasting
+              </p>
+              <h2 class="font-serif-editorial text-[clamp(2.15rem,3.6vw,3.35rem)] leading-[1.12] text-[#1E1612]">
+                Every Cup Has a Story.
+              </h2>
+              <p class="mt-6 text-[15.5px] leading-[1.75] text-[#564940]">
+                Great coffee begins long before steam rises from the cup. At SABLE &amp; STEAM, we partner with seasonal micro-lot growers across Ethiopia, Colombia, and Papua New Guinea, roasting lightly in small batches in Sydney to honour the distinct terroir of every harvest.
+              </p>
+              <p class="mt-4 text-[15.5px] leading-[1.75] text-[#564940]">
+                Whether pulling a syrupy morning ristretto or hand-pouring a floral washed filter, our baristas weigh, time, and taste throughout service—treating daily coffee not as a hurried transaction, but as a quiet craft.
+              </p>
+
+              <!-- Editorial Numbered List with Hairline Dividers -->
+              <div class="mt-10 divide-y divide-[#DFD5C5] border-t border-b border-[#DFD5C5]">
+                <div class="py-4 flex items-baseline justify-between gap-6">
+                  <div>
+                    <h3 class="font-serif-editorial text-xl font-semibold text-[#1E1612]">
+                      01. Seasonal Direct-Trade Lots
+                    </h3>
+                    <p class="mt-1 text-sm text-[#564940] leading-relaxed">
+                      Single-estate harvests selected at peak sweetness and rotated with the Australian seasons.
+                    </p>
+                  </div>
+                </div>
+                <div class="py-4 flex items-baseline justify-between gap-6">
+                  <div>
+                    <h3 class="font-serif-editorial text-xl font-semibold text-[#1E1612]">
+                      02. Tailored Water &amp; Roast Profiles
+                    </h3>
+                    <p class="mt-1 text-sm text-[#564940] leading-relaxed">
+                      Custom remineralised Sydney water paired with gentle roast curves that preserve origin clarity.
+                    </p>
+                  </div>
+                </div>
+                <div class="py-4 flex items-baseline justify-between gap-6">
+                  <div>
+                    <h3 class="font-serif-editorial text-xl font-semibold text-[#1E1612]">
+                      03. Unhurried Bar Service
+                    </h3>
+                    <p class="mt-1 text-sm text-[#564940] leading-relaxed">
+                      Served in hand-thrown New South Wales stoneware warmed specifically for milk or black coffee.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Coffee and Café Menu -->
+      <section id="menu" class="py-24 md:py-32 bg-[#F2ECE1] border-b border-[#DFD5C5]">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-10">
+          <!-- Section Header & View Full Menu CTA -->
+          <div class="reveal-block flex flex-col md:flex-row md:items-end justify-between gap-8 pb-10 border-b border-[#DFD5C5]">
+            <div class="max-w-xl">
+              <p class="text-xs font-medium tracking-[0.08em] text-[#556148] mb-3">
+                Daily Offerings <span aria-hidden="true">·</span> Prices in AUD
+              </p>
+              <h2 class="font-serif-editorial text-[clamp(2.15rem,3.6vw,3.35rem)] leading-[1.12] text-[#1E1612]">
+                Coffee &amp; Morning Kitchen.
+              </h2>
+              <p class="mt-4 text-[15.5px] leading-[1.7] text-[#564940]">
+                Prepared to order from 6:30 am. Oat, soy, and roasted macadamia milks are available across our bar alongside dawn-baked viennoiserie.
+              </p>
+            </div>
+
+            <div class="shrink-0">
+              <button
+                type="button"
+                id="open-full-menu-btn"
+                class="inline-flex items-center justify-center px-6 py-3 text-xs font-medium tracking-[0.06em] text-[#FAF7F2] bg-[#1E1612] hover:bg-[#2C211B] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1E1612]"
+              >
+                View Full Menu
+              </button>
+            </div>
+          </div>
+
+          <!-- Functional Category Filter Controls -->
+          <div class="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div
+              id="menu-filter-tabs"
+              role="tablist"
+              aria-label="Café Menu Categories"
+              class="flex items-center gap-1.5 overflow-x-auto pb-2 sm:pb-0 p-1 bg-[#E6DDD0]/80"
+            >
+              <!-- Populated by main.js -->
+            </div>
+            <p id="menu-category-subtitle" class="text-xs text-[#564940]">
+              Daily espresso bar, seasonal signatures, tea &amp; morning viennoiserie
+            </p>
+          </div>
+
+          <!-- Editorial Menu Split: Menu Listings + Selective Photography Spotlight -->
+          <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div id="menu-items-container" class="lg:col-span-7 divide-y divide-[#DFD5C5] border-t border-b border-[#DFD5C5]">
+              <!-- Populated by main.js -->
+            </div>
+
+            <!-- Selective Photography Spotlight (Sticky on Desktop) -->
+            <aside class="lg:col-span-5 lg:sticky lg:top-28">
+              <div class="bg-[#FAF7F2] p-6 md:p-8 border border-[#DFD5C5]">
+                <div class="overflow-hidden aspect-[4/5] img-fallback-shell">
+                  <img
+                    id="menu-spotlight-img"
+                    src="/src/assets/images/brown_butter_latte_1793352940592.jpg"
+                    alt="Brown Butter Latte served in speckled ceramic cup"
+                    referrerpolicy="no-referrer"
+                    class="w-full h-full object-cover transition-opacity duration-300"
+                  />
+                </div>
+                <div class="mt-5">
+                  <div class="flex items-baseline justify-between gap-4">
+                    <p id="menu-spotlight-kicker" class="text-xs text-[#556148] font-medium">
+                      Signature Drinks · Hot · House Signature
+                    </p>
+                    <span id="menu-spotlight-price" class="text-sm font-medium text-[#1E1612] tabular-price">$7.20</span>
+                  </div>
+                  <h3 id="menu-spotlight-title" class="mt-1.5 font-serif-editorial text-2xl text-[#1E1612]">
+                    Brown Butter Latte
+                  </h3>
+                  <p id="menu-spotlight-caption" class="mt-2 text-sm text-[#564940] leading-relaxed">
+                    Nutty toasted milk solids balanced with dark espresso and Murray River sea salt.
+                  </p>
+                  <p class="mt-4 pt-4 border-t border-[#DFD5C5] text-xs text-[#564940]">
+                    Select any photo-marked offering on the menu to preview photography, or open the complete broadsheet menu.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Signature Drinks Showcase -->
+      <section id="signatures" class="py-24 md:py-32 bg-[#1E1612] text-[#FAF7F2]">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-10">
+          <div class="reveal-block max-w-2xl mb-16 md:mb-20">
+            <p class="text-xs font-medium tracking-[0.08em] text-[#E6DDD0]/75 mb-3">
+              Seasonal House Creations <span aria-hidden="true">·</span> Autumn / Winter Selection
+            </p>
+            <h2 class="font-serif-editorial text-[clamp(2.25rem,3.8vw,3.5rem)] leading-[1.1] text-[#FAF7F2]">
+              Three Signature Drinks, Composed in House.
+            </h2>
+            <p class="mt-5 text-[15.5px] leading-[1.75] text-[#E6DDD0]/80">
+              Every syrup, butter emulsion, and cold extraction is prepared from raw whole ingredients in our Surry Hills kitchen—designed to complement, never mask, the character of the coffee.
+            </p>
+          </div>
+
+          <div id="signature-drinks-grid" class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 items-start">
+            <!-- Populated by main.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Our Story ("Good Coffee. Thoughtful Moments.") -->
+      <section id="story" class="py-24 md:py-32 bg-[#FAF7F2] border-b border-[#DFD5C5]">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-10">
+          <div class="reveal-block grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-12 md:mb-16">
+            <div class="lg:col-span-7">
+              <p class="text-xs font-medium tracking-[0.08em] text-[#556148] mb-3">
+                Our Story <span aria-hidden="true">·</span> Established in Surry Hills
+              </p>
+              <h2 class="font-serif-editorial text-[clamp(2.35rem,4vw,3.75rem)] leading-[1.08] text-[#1E1612]">
+                Good Coffee. Thoughtful Moments.
+              </h2>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-[15.5px] leading-[1.75] text-[#564940]">
+                Shaped by Sydney’s sunlit café culture and a quiet appreciation for tactile architecture, SABLE &amp; STEAM was imagined as a sanctuary between home and work.
+              </p>
+            </div>
+          </div>
+
+          <figure class="reveal-block relative overflow-hidden aspect-[16/9] img-fallback-shell">
+            <img
+              data-asset="interior"
+              src="/src/assets/images/sydney_cafe_interior_1793352944989.jpg"
+              alt="SABLE & STEAM Surry Hills café interior featuring limewash walls, muted olive seating, and Tasmanian oak communal table"
+              referrerpolicy="no-referrer"
+              loading="lazy"
+              class="w-full h-full object-cover"
+            />
+            <div
+              aria-hidden="true"
+              class="absolute inset-0 bg-gradient-to-t from-[#140E0B]/70 via-transparent to-transparent"
+            ></div>
+            <figcaption class="absolute bottom-0 inset-x-0 p-6 md:p-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-[#FAF7F2]">
+              <p class="font-serif-editorial italic text-xl md:text-2xl max-w-xl text-[#FAF7F2]">
+                “We wanted a room where morning light, warm timber, and the aroma of freshly ground coffee naturally slow your pace.”
+              </p>
+              <span class="text-xs tracking-[0.06em] text-[#E6DDD0]/85 whitespace-nowrap">
+                Reservoir Street Dining Room
+              </span>
+            </figcaption>
+          </figure>
+
+          <div class="reveal-block mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16">
+            <div class="md:col-span-4 border-t border-[#DFD5C5] pt-6">
+              <p class="text-xs font-medium tracking-[0.06em] text-[#564940]">Craft &amp; Provenance</p>
+              <p class="mt-2 font-serif-editorial text-2xl text-[#1E1612]">
+                Built around patience, transparency, and warm hospitality.
+              </p>
+            </div>
+            <div class="md:col-span-4 text-[15.5px] leading-[1.8] text-[#564940]">
+              SABLE &amp; STEAM began with a simple observation: Sydney produces some of the finest espresso in the world, yet the spaces where we drink it have grown increasingly hurried. We set out to restore a sense of calm ritual to the morning cup—pairing precision extraction with natural materials that age gracefully.
+            </div>
+            <div class="md:col-span-4 text-[15.5px] leading-[1.8] text-[#564940]">
+              From hand-trowelled limewash plaster and muted olive banquettes to ceramics glazed by independent makers in the Southern Highlands, every detail is chosen for warmth rather than spectacle. Whether you stay for five quiet minutes at the espresso bar or an hour at the oak communal table, you are warmly welcome.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Our Space & Immersive Gallery -->
+      <section id="space" class="py-24 md:py-32 bg-[#F2ECE1] border-b border-[#DFD5C5]">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-10">
+          <div class="reveal-block flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
+            <div class="max-w-2xl">
+              <p class="text-xs font-medium tracking-[0.08em] text-[#556148] mb-3">
+                Our Space &amp; Gallery <span aria-hidden="true">·</span> Materiality &amp; Atmosphere
+              </p>
+              <h2 class="font-serif-editorial text-[clamp(2.15rem,3.6vw,3.35rem)] leading-[1.12] text-[#1E1612]">
+                Natural Light, Honed Stone, and Unhurried Conversation.
+              </h2>
+              <p class="mt-4 text-[15.5px] leading-[1.75] text-[#564940]">
+                Explore the textures of our Surry Hills room—fluted Tasmanian oak, raw travertine, dawn-baked pastries, and espresso in motion. Select any photograph to view in detail.
+              </p>
+            </div>
+            <p class="text-xs text-[#564940] shrink-0">
+              6 Editorial Plates <span aria-hidden="true">·</span> Click to Enlarge
+            </p>
+          </div>
+
+          <div id="gallery" class="scroll-mt-28 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+            <!-- Populated by main.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Customer Testimonials -->
+      <section id="reflections" class="py-24 md:py-28 bg-[#FAF7F2] border-b border-[#DFD5C5]">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-10">
+          <div class="reveal-block flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-[#DFD5C5]">
+            <div>
+              <p class="text-xs font-medium tracking-[0.08em] text-[#556148] mb-3">
+                Morning Reflections <span aria-hidden="true">·</span> Sample Guest Impressions
+              </p>
+              <h2 class="font-serif-editorial text-[clamp(2rem,3.2vw,3rem)] leading-[1.14] text-[#1E1612]">
+                Notes From the Communal Table.
+              </h2>
+            </div>
+            <p class="text-xs text-[#564940] max-w-md leading-relaxed">
+              Sample fictional impressions written to illustrate tone and atmosphere for this portfolio demonstration—not independently verified customer reviews.
+            </p>
+          </div>
+
+          <div id="testimonials-grid" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+            <!-- Populated by main.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Visit Our Café & Contact -->
+      <section id="visit" class="py-24 md:py-32 bg-[#F2ECE1]">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+            <!-- Left Column: Café Corner Photograph -->
+            <div class="reveal-block lg:col-span-6 flex flex-col">
+              <div class="relative flex-1 min-h-[380px] overflow-hidden img-fallback-shell">
+                <img
+                  data-asset="seating"
+                  src="/src/assets/images/oak_stone_seating_1793352947853.jpg"
+                  alt="Sunlit corner table at SABLE & STEAM with fluted oak joinery, travertine stone, and native Australian botanicals"
+                  referrerpolicy="no-referrer"
+                  loading="lazy"
+                  class="w-full h-full object-cover lg:h-full"
+                />
+                <div
+                  aria-hidden="true"
+                  class="absolute inset-0 bg-gradient-to-t from-[#140E0B]/65 via-transparent to-transparent"
+                ></div>
+                <div class="absolute bottom-0 inset-x-0 p-6 md:p-8 text-[#FAF7F2]">
+                  <p class="text-xs tracking-[0.06em] text-[#E6DDD0]/90">
+                    Walk-ins Welcome Daily <span aria-hidden="true">·</span> Communal &amp; Banquette Seating
+                  </p>
+                  <p class="mt-1 font-serif-editorial text-2xl">
+                    48 Reservoir Street, Surry Hills NSW 2010
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Visit Details, Hours, Directions & Contact Enquiry -->
+            <div class="reveal-block lg:col-span-6 flex flex-col justify-between bg-[#FAF7F2] p-8 md:p-12 border border-[#DFD5C5]">
+              <div>
+                <p class="text-xs font-medium tracking-[0.08em] text-[#556148] mb-3">
+                  Visit Our Café <span aria-hidden="true">·</span> Fictional Demonstration Venue
+                </p>
+                <h2 class="font-serif-editorial text-[clamp(2.15rem,3.4vw,3.1rem)] leading-[1.12] text-[#1E1612]">
+                  Find Us in Surry Hills.
+                </h2>
+                <p class="mt-4 text-[15px] leading-[1.7] text-[#564940]">
+                  Five minutes’ walk from Central Station along leafy Reservoir Street. Please note all address, phone, and contact details below represent a fictional Sydney café concept created for portfolio demonstration.
+                </p>
+
+                <!-- Structured Details Grid -->
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 py-8 border-t border-b border-[#DFD5C5]">
+                  <div>
+                    <h3 class="text-xs font-semibold tracking-[0.06em] text-[#1E1612]">Address &amp; Contact</h3>
+                    <address class="not-italic mt-3 text-sm text-[#564940] space-y-1.5 leading-relaxed">
+                      <p class="text-[#1E1612] font-medium">48 Reservoir Street</p>
+                      <p>Surry Hills NSW 2010, Australia</p>
+                      <p class="pt-1 tabular-price">
+                        Phone:
+                        <a href="tel:+61280914420" class="text-[#1E1612] underline decoration-[#DFD5C5] hover:decoration-[#1E1612]">
+                          (02) 8091 4420
+                        </a>
+                      </p>
+                      <p>
+                        Email:
+                        <a href="mailto:hello@sableandsteam.example.com" class="text-[#1E1612] underline decoration-[#DFD5C5] hover:decoration-[#1E1612]">
+                          hello@sableandsteam.example.com
+                        </a>
+                      </p>
+                    </address>
+                  </div>
+
+                  <div>
+                    <h3 class="text-xs font-semibold tracking-[0.06em] text-[#1E1612]">Opening Hours</h3>
+                    <dl class="mt-3 text-sm text-[#564940] space-y-2 tabular-price">
+                      <div class="flex justify-between gap-4">
+                        <dt>Mon – Fri</dt>
+                        <dd class="text-[#1E1612] font-medium">6:30 am – 3:30 pm</dd>
+                      </div>
+                      <div class="flex justify-between gap-4">
+                        <dt>Sat – Sun</dt>
+                        <dd class="text-[#1E1612] font-medium">7:00 am – 4:00 pm</dd>
+                      </div>
+                      <div class="flex justify-between gap-4">
+                        <dt>Public Holidays</dt>
+                        <dd class="text-[#1E1612] font-medium">7:30 am – 2:00 pm</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+
+                <!-- Directions & Copy Address Actions -->
+                <div class="mt-6 flex flex-wrap items-center gap-4">
+                  <button
+                    type="button"
+                    id="open-directions-btn"
+                    class="inline-flex items-center justify-center px-6 py-3 text-xs font-medium tracking-[0.05em] text-[#FAF7F2] bg-[#556148] hover:bg-[#434D38] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#556148]"
+                  >
+                    Directions &amp; Transit Guide
+                  </button>
+                  <button
+                    type="button"
+                    id="copy-address-btn"
+                    class="inline-flex items-center justify-center px-5 py-3 text-xs font-medium tracking-[0.05em] text-[#1E1612] border border-[#1E1612]/30 hover:border-[#1E1612] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1E1612]"
+                  >
+                    Copy Sydney Address
+                  </button>
+                  <span id="copy-address-feedback" role="status" aria-live="polite" class="text-xs text-[#556148] font-medium"></span>
+                </div>
+              </div>
+
+              <!-- Contact / Café Enquiry Form -->
+              <div id="contact" class="scroll-mt-28 mt-10 pt-8 border-t border-[#DFD5C5]">
+                <h3 class="font-serif-editorial text-2xl text-[#1E1612]">Send an Enquiry</h3>
+                <p class="mt-1 text-sm text-[#564940]">
+                  Planning a quiet morning group table, wholesale coffee tasting, or private event? Leave a note below.
+                </p>
+
+                <form id="contact-enquiry-form" novalidate class="mt-5 space-y-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label for="enquiry-name" class="block text-xs font-medium text-[#1E1612] mb-1.5">Your Name</label>
+                      <input
+                        type="text"
+                        id="enquiry-name"
+                        name="name"
+                        required
+                        placeholder="e.g. Amelia Vance"
+                        class="w-full px-3.5 py-2.5 text-sm bg-[#F2ECE1]/60 border border-[#DFD5C5] text-[#1E1612] placeholder:text-[#564940]/60 focus:outline-none focus:border-[#556148]"
+                      />
+                    </div>
+                    <div>
+                      <label for="enquiry-email" class="block text-xs font-medium text-[#1E1612] mb-1.5">Email Address</label>
+                      <input
+                        type="email"
+                        id="enquiry-email"
+                        name="email"
+                        required
+                        placeholder="amelia@example.com"
+                        class="w-full px-3.5 py-2.5 text-sm bg-[#F2ECE1]/60 border border-[#DFD5C5] text-[#1E1612] placeholder:text-[#564940]/60 focus:outline-none focus:border-[#556148]"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="enquiry-message" class="block text-xs font-medium text-[#1E1612] mb-1.5">Message or Tasting Request</label>
+                    <textarea
+                      id="enquiry-message"
+                      name="message"
+                      rows="3"
+                      required
+                      placeholder="Tell us about your visit, group size, or coffee enquiry..."
+                      class="w-full px-3.5 py-2.5 text-sm bg-[#F2ECE1]/60 border border-[#DFD5C5] text-[#1E1612] placeholder:text-[#564940]/60 focus:outline-none focus:border-[#556148]"
+                    ></textarea>
+                  </div>
+                  <div class="flex flex-wrap items-center justify-between gap-4">
+                    <button
+                      type="submit"
+                      class="inline-flex items-center justify-center px-6 py-3 text-xs font-medium tracking-[0.05em] text-[#FAF7F2] bg-[#1E1612] hover:bg-[#2C211B] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1E1612]"
+                    >
+                      Send Message
+                    </button>
+                    <p id="form-feedback" role="status" aria-live="polite" class="text-xs font-medium"></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 10. Sophisticated Footer -->
+    <footer class="bg-[#1E1612] text-[#E6DDD0] border-t border-white/10">
+      <div class="max-w-[1320px] mx-auto px-6 md:px-10 py-16 md:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-14 border-b border-white/10">
+          <!-- Brand Ethos -->
+          <div class="lg:col-span-4">
+            <a href="#home" class="font-serif-editorial text-2xl font-semibold tracking-[0.14em] text-[#FAF7F2]">
+              SABLE &amp; STEAM
+            </a>
+            <p class="mt-4 text-sm text-[#E6DDD0]/75 leading-relaxed max-w-sm">
+              Specialty coffee, seasonal house infusions, and dawn-baked viennoiserie crafted with quiet intention in Surry Hills, Sydney.
+            </p>
+            <p class="mt-5 text-xs text-[#E6DDD0]/55 leading-relaxed max-w-sm">
+              Portfolio Demonstration: SABLE &amp; STEAM is a fictional specialty café brand designed to showcase custom hospitality web direction.
+            </p>
+          </div>
+
+          <!-- Navigation -->
+          <div class="lg:col-span-2">
+            <h2 class="text-xs font-semibold tracking-[0.08em] text-[#FAF7F2] font-sans">Explore</h2>
+            <ul class="mt-4 space-y-2.5 text-sm text-[#E6DDD0]/75">
+              <li><a href="#home" class="hover:text-[#FAF7F2] transition-colors">Home</a></li>
+              <li><a href="#story" class="hover:text-[#FAF7F2] transition-colors">Our Story</a></li>
+              <li><a href="#menu" class="hover:text-[#FAF7F2] transition-colors">Coffee Menu</a></li>
+              <li><a href="#space" class="hover:text-[#FAF7F2] transition-colors">Our Space</a></li>
+              <li><a href="#gallery" class="hover:text-[#FAF7F2] transition-colors">Gallery</a></li>
+              <li><a href="#contact" class="hover:text-[#FAF7F2] transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Menu Categories -->
+          <div class="lg:col-span-3">
+            <h2 class="text-xs font-semibold tracking-[0.08em] text-[#FAF7F2] font-sans">Menu Categories</h2>
+            <ul class="mt-4 space-y-2.5 text-sm text-[#E6DDD0]/75">
+              <li>
+                <button type="button" data-footer-category="espresso" class="hover:text-[#FAF7F2] transition-colors text-left cursor-pointer">
+                  Espresso Bar
+                </button>
+              </li>
+              <li>
+                <button type="button" data-footer-category="signature" class="hover:text-[#FAF7F2] transition-colors text-left cursor-pointer">
+                  Signature Drinks
+                </button>
+              </li>
+              <li>
+                <button type="button" data-footer-category="tea" class="hover:text-[#FAF7F2] transition-colors text-left cursor-pointer">
+                  Tea &amp; Botanical Drinks
+                </button>
+              </li>
+              <li>
+                <button type="button" data-footer-category="bakery" class="hover:text-[#FAF7F2] transition-colors text-left cursor-pointer">
+                  Bakery &amp; Light Bites
+                </button>
+              </li>
+              <li>
+                <button type="button" id="footer-full-menu-btn" class="text-[#FAF7F2] underline decoration-white/30 hover:decoration-white transition-colors text-left cursor-pointer">
+                  Open Complete Menu Sheet
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Hours, Contact & Demo Social Links -->
+          <div class="lg:col-span-3">
+            <h2 class="text-xs font-semibold tracking-[0.08em] text-[#FAF7F2] font-sans">Hours &amp; Location</h2>
+            <div class="mt-4 text-sm text-[#E6DDD0]/75 space-y-2 tabular-price">
+              <p>48 Reservoir St, Surry Hills NSW 2010</p>
+              <p>Mon – Fri: 6:30 am – 3:30 pm</p>
+              <p>Sat – Sun: 7:00 am – 4:00 pm</p>
+              <p class="pt-1">(02) 8091 4420</p>
+              <p>hello@sableandsteam.example.com</p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-white/10">
+              <p class="text-xs text-[#E6DDD0]/60 mb-2">Social Channels (Demo Preview)</p>
+              <div class="flex items-center gap-4 text-xs text-[#E6DDD0]/80">
+                <button type="button" data-demo-social="Instagram (@sableandsteam.syd)" class="hover:text-[#FAF7F2] underline decoration-white/25 cursor-pointer">
+                  Instagram (Demo)
+                </button>
+                <span aria-hidden="true">·</span>
+                <button type="button" data-demo-social="Journal & Roast Notes" class="hover:text-[#FAF7F2] underline decoration-white/25 cursor-pointer">
+                  Roast Journal (Demo)
+                </button>
+              </div>
+              <p id="demo-social-feedback" role="status" aria-live="polite" class="mt-2 text-xs text-[#E6DDD0]/90"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#E6DDD0]/55">
+          <p>&copy; <span id="footer-year">2026</span> SABLE &amp; STEAM. All rights reserved.</p>
+          <p>Fictional Sydney Café Concept <span aria-hidden="true">·</span> Agency Portfolio Demonstration</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dedicated Complete Menu Modal ("View Full Menu") -->
+    <div
+      id="full-menu-modal"
+      class="fixed inset-0 z-50 hidden overflow-y-auto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="full-menu-title"
+    >
+      <div data-close-full-menu class="fixed inset-0 bg-[#140E0B]/80 backdrop-blur-xs"></div>
+      <div class="relative min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-10">
+        <div class="relative w-full max-w-5xl bg-[#FAF7F2] text-[#1E1612] border border-[#DFD5C5] p-6 sm:p-10 md:p-14 shadow-2xl">
+          <div class="flex items-start justify-between gap-6 pb-8 border-b border-[#DFD5C5]">
+            <div>
+              <p class="text-xs font-medium tracking-[0.08em] text-[#556148]">
+                SABLE &amp; STEAM <span aria-hidden="true">·</span> Surry Hills, Sydney
+              </p>
+              <h2 id="full-menu-title" class="mt-2 font-serif-editorial text-3xl sm:text-4xl text-[#1E1612]">
+                Complete Café &amp; Espresso Menu
+              </h2>
+              <p class="mt-2 text-xs text-[#564940]">
+                All prices in Australian Dollars (AUD) inclusive of GST <span aria-hidden="true">·</span> Alternative milks (Oat, Soy, Macadamia) +$0.70
+              </p>
+            </div>
+            <button
+              type="button"
+              data-close-full-menu
+              aria-label="Close full menu"
+              class="w-11 h-11 inline-flex items-center justify-center border border-[#DFD5C5] text-[#1E1612] hover:bg-[#F2ECE1] transition-colors cursor-pointer shrink-0"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div id="full-menu-sheet-body" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-12">
+            <!-- Populated by main.js -->
+          </div>
+
+          <div class="mt-12 pt-6 border-t border-[#DFD5C5] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[#564940]">
+            <p>Kitchen closes at 2:30 pm daily; espresso and signature drinks served until close.</p>
+            <button
+              type="button"
+              data-close-full-menu
+              class="px-5 py-2.5 bg-[#1E1612] text-[#FAF7F2] font-medium hover:bg-[#2C211B] transition-colors cursor-pointer whitespace-nowrap"
+            >
+              Return to Page
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Directions & Neighbourhood Guide Modal -->
+    <div
+      id="directions-modal"
+      class="fixed inset-0 z-50 hidden overflow-y-auto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="directions-modal-title"
+    >
+      <div data-close-directions class="fixed inset-0 bg-[#140E0B]/80 backdrop-blur-xs"></div>
+      <div class="relative min-h-screen flex items-center justify-center p-4 sm:p-6">
+        <div class="relative w-full max-w-xl bg-[#FAF7F2] text-[#1E1612] border border-[#DFD5C5] p-6 sm:p-10 shadow-2xl">
+          <div class="flex items-start justify-between gap-4 pb-6 border-b border-[#DFD5C5]">
+            <div>
+              <p class="text-xs font-medium tracking-[0.08em] text-[#556148]">Getting Here <span aria-hidden="true">·</span> Surry Hills</p>
+              <h2 id="directions-modal-title" class="mt-1.5 font-serif-editorial text-3xl text-[#1E1612]">
+                48 Reservoir Street, Sydney
+              </h2>
+            </div>
+            <button
+              type="button"
+              data-close-directions
+              aria-label="Close directions dialog"
+              class="w-10 h-10 inline-flex items-center justify-center border border-[#DFD5C5] text-[#1E1612] hover:bg-[#F2ECE1] transition-colors cursor-pointer"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="mt-6 space-y-5 text-sm text-[#564940] leading-relaxed">
+            <p class="text-xs bg-[#F2ECE1] p-3.5 border border-[#DFD5C5] text-[#1E1612]">
+              Demonstration Notice: 48 Reservoir Street represents a fictional venue address in Surry Hills NSW 2010 created for this agency portfolio piece.
+            </p>
+            <div>
+              <h3 class="font-semibold text-[#1E1612]">By Train &amp; Light Rail</h3>
+              <p class="mt-1">5-minute walk east from Central Station (Chalmers Street exit) or Surry Hills Light Rail stop along Devonshire Street.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[#1E1612]">Cycling &amp; Street Parking</h3>
+              <p class="mt-1">Dedicated bicycle rails sit directly outside our sandstone terrace; 1-hour metered parking is available along Reservoir and Riley Streets.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[#1E1612]">Accessibility</h3>
+              <p class="mt-1">Step-free street-level entry via Reservoir Street with accessible ground-floor dining room and washroom facilities.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-[#DFD5C5] flex items-center justify-end gap-3">
+            <button
+              type="button"
+              data-close-directions
+              class="px-5 py-2.5 text-xs font-medium bg-[#556148] text-[#FAF7F2] hover:bg-[#434D38] transition-colors cursor-pointer"
+            >
+              Close Guide
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Working Gallery Image Lightbox -->
+    <div
+      id="gallery-lightbox"
+      class="fixed inset-0 z-50 hidden bg-[#120D0A]/95 text-[#FAF7F2]"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-title"
+    >
+      <div class="h-full w-full flex flex-col justify-between p-4 sm:p-8 max-w-[1400px] mx-auto">
+        <div class="flex items-center justify-between gap-4">
+          <div class="text-xs tracking-[0.08em] text-[#E6DDD0]/80 tabular-price">
+            <span id="lightbox-counter">01 / 06</span>
+            <span aria-hidden="true" class="mx-2">·</span>
+            <span id="lightbox-category">The Café Interior</span>
+          </div>
+          <button
+            type="button"
+            id="lightbox-close"
+            aria-label="Close image lightbox"
+            class="w-11 h-11 inline-flex items-center justify-center border border-white/20 text-[#FAF7F2] hover:bg-white/10 transition-colors cursor-pointer"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="relative flex-1 my-4 flex items-center justify-center min-h-0">
+          <button
+            type="button"
+            id="lightbox-prev"
+            aria-label="Previous gallery photograph"
+            class="absolute left-0 sm:left-2 z-10 w-11 h-11 inline-flex items-center justify-center bg-[#1E1612]/85 border border-white/20 text-[#FAF7F2] hover:bg-[#556148] transition-colors cursor-pointer"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+
+          <img
+            id="lightbox-image"
+            src=""
+            alt=""
+            referrerpolicy="no-referrer"
+            class="max-h-[72vh] max-w-full sm:max-w-[82%] object-contain select-none"
+          />
+
+          <button
+            type="button"
+            id="lightbox-next"
+            aria-label="Next gallery photograph"
+            class="absolute right-0 sm:right-2 z-10 w-11 h-11 inline-flex items-center justify-center bg-[#1E1612]/85 border border-white/20 text-[#FAF7F2] hover:bg-[#556148] transition-colors cursor-pointer"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="max-w-2xl mx-auto text-center">
+          <h3 id="lightbox-title" class="font-serif-editorial text-2xl text-[#FAF7F2]"></h3>
+          <p id="lightbox-caption" class="mt-1.5 text-sm text-[#E6DDD0]/80 leading-relaxed"></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
